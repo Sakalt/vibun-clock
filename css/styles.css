@@ -1,0 +1,29 @@
+h1, h2, div {
+    text-align: center;
+}
+body {
+    background-image: url(../assets/marble.jpg)
+}
+main {
+    margin-left: auto;
+    margin-right: auto;
+}
+h1 {
+    font-size: 70px;
+    font-family: Futura;
+    background-color: #666666;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: rgba(245,245,245,0.5) 3px 5px 1px;
+    margin-bottom: 5px;
+}
+h2 {
+    font-size: 30px;
+    margin-top: 30px;
+    margin-bottom: 0px;
+}
+div {
+    font-size: 20px;
+}
