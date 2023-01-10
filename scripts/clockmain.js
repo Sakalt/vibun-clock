@@ -15,7 +15,7 @@ export class EikyuDate {
         const pivot = Date.UTC(2023, 0, 1);
         const difference = earthDate - pivot;
         const eikyuDif = difference / 0.433395;
-        const eikyuNow = eikyuDif + 337841824497;
+        const eikyuNow = eikyuDif + 337641824497;
         return eikyuNow;
     }
     toEikyuFormat() {
