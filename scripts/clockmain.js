@@ -88,6 +88,6 @@ export class EikyuDate {
             fweek: eikyuObj.fweek,
             fyea: funNumber.toFunNumber(eikyuObj.fyea),
         };
-        return `${obj.fyea}/${obj.mon}/${obj.day} (${obj.fweek}) ${obj.hou}:${obj.per}:${obj.min}:${obj.sec}`;
+        return `${obj.fyea}年${obj.mon}月${obj.day}日 ${obj.fweek}周 ${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`;
     }
 }
