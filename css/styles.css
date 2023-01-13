@@ -39,7 +39,7 @@ h2 {
 }
 @font-face {   
     font-family: "LetiaNum";
-    src: url("/fonts/LetiaNum.ttf"),
+    src: url("/fonts/LetiaNum.ttf");
 }
 @font-face {   
     font-family: "FunScript";
