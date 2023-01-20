@@ -1,4 +1,4 @@
-h1, h2, div {
+h1, h2, #digital, p {
     text-align: center;
 }
 body {
@@ -7,6 +7,7 @@ body {
 main {
     margin-left: auto;
     margin-right: auto;
+    width: 80%;
 }
 h1 {
     font-size: 70px;
@@ -36,6 +37,30 @@ h2 {
 #eikyu {
     font-family: "LetiaNum", sans-serif;
     font-size: 28px;
+}
+#digital {
+    float: left;
+}
+#analog {
+    float: right;
+}
+
+content {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#clocks {
+	display: block;
+	width: 250px;
+	height: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    margin-top: 15px;
+}
+.clock {
+	position: absolute;
 }
 @font-face {   
     font-family: "LetiaNum";
