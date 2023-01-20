@@ -93,4 +93,19 @@ export class EikyuDate {
         }
         return `${obj.fyea}年${obj.mon}月${obj.day}日 ${obj.fweek}周 ${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`
     }
+    getFunScriptedHTML() {
+        const funNumber = new FunNumber()
+        const eikyuObj = this.toEikyuFormat()
+        const obj = {
+            sec: funNumber.toFunNumber(eikyuObj.sec),
+            min: funNumber.toFunNumber(eikyuObj.min),
+            per: funNumber.toFunNumber(eikyuObj.per),
+            hou: funNumber.toFunNumber(eikyuObj.hou),
+            day: funNumber.toFunNumber(eikyuObj.day),
+            mon: funNumber.toFunNumber(eikyuObj.mon),
+            fweek: eikyuObj.fweek,
+            fyea: funNumber.toFunNumber(eikyuObj.fyea),
+        }
+        return `${obj.fyea}年${obj.mon}月${obj.day}日${obj.fweek}周<br>${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`
+    }
 }
