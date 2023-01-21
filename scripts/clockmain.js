@@ -1,14 +1,27 @@
 import { FunNumber } from './funnumber.js';
+function mod(a, b) {
+    return a * b < 0 ? a % b + b : a % b;
+}
 export class EikyuDate {
-    constructor(date) {
+    constructor(inputType, valueOrYear, month = 1, day = 1, hour = 0, period = 0, minute = 0, second = 0, milisecond = 0) {
         this.date = Date.now();
-        this.date = date;
+        if (inputType == "total") {
+            this.date = valueOrYear;
+        }
+        else if (inputType == "split") {
+            this.date = this.toMiliseconds(valueOrYear, month, day, hour, period, minute, second, milisecond);
+            console.log("collect!");
+        }
     }
-    toMiliseconds(yea = 1240, mon = 1, day = 1, hou = 0, per = 0, min = 0, sec = 0, mil = 0) {
+    toMiliseconds(yea, mon = 1, day = 1, hou = 0, per = 0, min = 0, sec = 0, mil = 0) {
         const difYear = yea - 1240;
-        const dayOfYear = (difYear) * 539 + Math.ceil((difYear % 40)) + Math.ceil(((difYear + 40) % 400));
-        const dayOfAll = dayOfYear + (mon - 1) * 32 + day - 1;
+        const dayOfYear = (difYear) * 539 + Math.ceil((difYear / 40)) + Math.floor(((difYear + 40) / 400));
+        const dayOfMonth = Math.floor((mon - 1) / 17) * 539 + (mod(mon - 1, 17)) * 32;
+        const dayOfAll = dayOfYear + dayOfMonth + day - 1;
+        console.log(dayOfYear);
+        console.log(dayOfMonth);
         const allMiliSecond = dayOfAll * 200000000 + hou * 10000000 + per * 1000000 + min * 100000 + sec * 1000 + mil;
+        console.log(difYear);
         return allMiliSecond;
     }
     static toEikyu(earthDate) {
@@ -26,7 +39,8 @@ export class EikyuDate {
         const eikyuPer = Math.floor(this.date / 1000 / 100 / 10 % 10);
         const eikyuHou = Math.floor(this.date / 1000 / 100 / 10 / 10 % 20);
         const differenceDay = this.date / 1000 / 100 / 10 / 10 / 20;
-        const eikyuFWeek = funweeklist[Math.floor(differenceDay - 1) % 6];
+        const eikyuFWeek = funweeklist[Math.floor(differenceDay) % 6];
+        const eikyuFWeekNum = Math.floor(differenceDay) % 6;
         let dayForNum = this.date / 1000 / 100 / 10 / 10 / 20;
         let countYears = 1240;
         while (dayForNum >= 0) {
@@ -46,8 +60,8 @@ export class EikyuDate {
         }
         const eikyuYea = countYears;
         const eikyuFunYea = eikyuYea + 843;
-        const eikyuMon = Math.ceil(dayForNum / 32);
-        const eikyuDay = Math.floor(dayForNum % 32);
+        const eikyuMon = Math.floor(dayForNum / 32) + 1;
+        const eikyuDay = Math.floor(dayForNum % 32) + 1;
         const dateObj = {
             sec: eikyuSec,
             min: eikyuMin,
@@ -56,6 +70,7 @@ export class EikyuDate {
             day: eikyuDay,
             mon: eikyuMon,
             fweek: eikyuFWeek,
+            fweeknum: eikyuFWeekNum,
             yea: eikyuYea,
             fyea: eikyuFunYea
         };
@@ -70,10 +85,10 @@ export class EikyuDate {
         return `${obj.fyea}/${obj.mon}/${obj.day}(${obj.fweek}) ${obj.hou}:${obj.per}:${obj.min}:${obj.sec}`;
     }
     static now() {
-        return new EikyuDate(EikyuDate.toEikyu(Date.now()));
+        return new EikyuDate("total", EikyuDate.toEikyu(Date.now()));
     }
     timezone(hour) {
-        return new EikyuDate(this.date + 10000000 * hour);
+        return new EikyuDate("total", this.date + 10000000 * hour);
     }
     getFunScripted() {
         const funNumber = new FunNumber();

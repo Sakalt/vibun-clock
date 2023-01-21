@@ -25,6 +25,7 @@ h2 {
     font-family: sans-serif;
     margin-top: 30px;
     margin-bottom: 0px;
+    text-align: center;
 }
 #jst {
     font-size: 20px;
@@ -38,17 +39,19 @@ h2 {
     font-family: "LetiaNum", sans-serif;
     font-size: 28px;
 }
-#digital {
-    float: left;
-}
-#analog {
-    float: right;
-}
 
 content {
     margin-left: auto;
     margin-right: auto;
     width: 50%;
+    display: inline-block;
+    width: 49%;
+    vertical-align:  top;
+    box-sizing: border-box;
+}
+.contentwrapper {
+    margin-bottom: 50px;
+    box-sizing: border-box;
 }
 #clocks {
 	display: block;
@@ -62,6 +65,108 @@ content {
 .clock {
 	position: absolute;
 }
+
+.wrapper{
+    max-width: 600px;
+    width: 80%;
+    color: #666;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+#monthheader {
+    text-align: center;
+    font-size: 40px;
+    width: 100%;
+    margin: 1rem 0 0;
+    font-family: "FunScript", sans-serif;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    outline: 2px solid #ddd;
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: #000;
+}
+th, td {
+    outline: 1px solid rgb(222, 222, 222);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-family: "FunScript", sans-serif;
+    font-size: 25px;
+    text-shadow: 
+    0.1px 0.1px 0, 
+    0.1px -0.1px 0px,
+    -0.1px 0.1px 0,
+    -0.1px -0.1px 0px,
+    0.1px 0px 0px,
+    0px 0.1px 0px,
+    -0.1px 0px 0px,
+    0px -0.1px 0px;
+    background-color: rgb(243, 243, 243);
+}
+/*日曜日*/
+.days0 {
+    color: rgb(142, 142, 142);
+}
+.days1 {
+    color: rgb(142, 0, 0);
+}
+.days2 {
+    color: rgb(142, 142, 0);
+}
+.days3 {
+    color: rgb(0, 142, 0);
+}
+.days4 {
+    color: rgb(0, 0, 142);
+}
+.days5 {
+    color: rgb(0, 0, 0);
+}
+/*前後月の日付*/
+td.disabled {
+    color: #ccc;
+}
+/*本日*/
+td.today {
+    background-color: #303030;
+    color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #606060;
+    color: #fff;
+    border: 1px solid #606060;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #a0a0a0;
+    border-color: #a0a0a0;
+}
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}
+
 @font-face {   
     font-family: "LetiaNum";
     src: url("/fonts/LetiaNum.ttf");

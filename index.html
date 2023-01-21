@@ -8,36 +8,56 @@
             <h1 class="title">
                 地球・永球時計
             </h1>
-            <content id="digital">
-                <h2>
-                    この端末の時刻（西暦）
-                </h2>
-                <div id="jst"></div>
-                <h2>
-                    永球標準時（列暦）
-                </h2>
-                <div id="eikyu"></div>
-                <h2>
-                    雰国標準時（旭暦）
-                </h2>
-                <div id="fun"></div>
-                <link rel="stylesheet" href="css/styles.css">
-                <script src="scripts/displayclock.js" type="module"></script>
-                <script src="scripts/analogclock.js" type="module"></script>
-            </content>
-            <content id="analog">
-                <h2>
-                    アナログ時計（雰国標準時）
-                </h2>
-                <div id="clocks">
-                    <img src="../assets/body.png" width="250" height="250" id="image_body" class="clock">
-                    <img src="../assets/sec.png" width="250" height="250" id="image_sec" class="clock">
-                    <img src="../assets/min.png" width="250" height="250" id="image_min" class="clock">
-                    <img src="../assets/per.png" width="250" height="250" id="image_per" class="clock">
-                    <img src="../assets/hou.png" width="250" height="250" id="image_hou" class="clock">
-                    <img src="../assets/pin.png" width="250" height="250" id="image_pin" class="clock">
+            <div class="contentwrapper">
+                <content id="digital">
+                    <h2>
+                        この端末の時刻（西暦）
+                    </h2>
+                    <div id="jst"></div>
+                    <h2>
+                        永球標準時（列暦）
+                    </h2>
+                    <div id="eikyu"></div>
+                    <h2>
+                        雰国標準時（旭暦）
+                    </h2>
+                    <div id="fun"></div>
+                    <link rel="stylesheet" href="css/styles.css">
+                    <script src="scripts/displayclock.js" type="module"></script>
+                    <script src="scripts/calendar.js" type="module"></script>
+                    <script src="scripts/analogclock.js" type="module"></script>
+                </content>
+                <content id="analog">
+                    <h2>
+                        アナログ時計（雰国標準時）
+                    </h2>
+                    <div id="clocks">
+                        <img src="../assets/body.png" width="250" height="250" id="image_body" class="clock">
+                        <img src="../assets/sec.png" width="250" height="250" id="image_sec" class="clock">
+                        <img src="../assets/min.png" width="250" height="250" id="image_min" class="clock">
+                        <img src="../assets/per.png" width="250" height="250" id="image_per" class="clock">
+                        <img src="../assets/hou.png" width="250" height="250" id="image_hou" class="clock">
+                        <img src="../assets/pin.png" width="250" height="250" id="image_pin" class="clock">
+                    </div>
+                </content>
+            </div>
+
+            <h2>
+                カレンダー（雰国標準時）
+            </h2>
+            <div class="wrapper">
+                <!-- xxxx年xx月を表示 -->
+                <div id="monthheader"></div>
+            
+                <!-- ボタンクリックで月移動 -->
+                <div id="next-prev-button">
+                    <button id="prev">&lt;</button>
+                    <button id="next">&gt;</button>
                 </div>
-            </content>
+            
+                <!-- カレンダー -->
+                <div id="calendar"></div>
+            </div>
         </main>
     </body>
 </html>
