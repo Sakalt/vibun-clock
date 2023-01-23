@@ -35,6 +35,8 @@ h2 {
     font-family: "FunScript", sans-serif;
     font-size: 28px;
     writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
     display: inline-block;
 }
 #eikyu {
@@ -130,6 +132,8 @@ th, td {
     font-family: "FunScript", sans-serif;
     font-size: 25px;
     background-color: rgb(243, 243, 243);
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
     writing-mode: vertical-rl;
 }
 /*日曜日*/
