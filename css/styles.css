@@ -34,9 +34,6 @@ h2 {
 #fun {
     font-family: "FunScript", sans-serif;
     font-size: 28px;
-    writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
     display: inline-block;
 }
 #eikyu {
@@ -132,9 +129,6 @@ th, td {
     font-family: "FunScript", sans-serif;
     font-size: 25px;
     background-color: rgb(243, 243, 243);
-    writing-mode: vertical-rl;
-    -ms-writing-mode: tb-rl;
-    -webkit-writing-mode: vertical-rl;
 }
 /*日曜日*/
 .days0 {
@@ -188,6 +182,13 @@ td.today {
 }
 #next {
     float: right;
+}
+
+th, td, #fun {
+    writing-mode: vertical-rl;
+    -ms-writing-mode: tb-rl;
+    -webkit-writing-mode: vertical-rl;
+    text-orientation: upright;
 }
 
 @font-face {   
