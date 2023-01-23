@@ -113,4 +113,4 @@ function rotate(array: any[]) {
       }
     }
     return a;
-  };
+};
