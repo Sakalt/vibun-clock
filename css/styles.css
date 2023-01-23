@@ -51,11 +51,11 @@ content {
     box-sizing: border-box;
 }
 #digital {
-    width: 35%;
+    width: 34%;
     vertical-align:  top;
 }
 #analog {
-    width: 35%;
+    width: 34%;
     vertical-align:  top;
 }
 #funclock {
@@ -132,9 +132,9 @@ th, td {
     font-family: "FunScript", sans-serif;
     font-size: 25px;
     background-color: rgb(243, 243, 243);
+    writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
-    writing-mode: vertical-rl;
 }
 /*日曜日*/
 .days0 {
