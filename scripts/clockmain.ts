@@ -82,6 +82,10 @@ export class EikyuDate {
         const obj = this.toEikyuFormat()
         return `${obj.yea}/${obj.mon}/${obj.day} ${obj.hou}:${obj.per}:${obj.min}:${obj.sec}`
     }
+    getFormattedHTML() {
+        const obj = this.toEikyuFormat()
+        return `${obj.yea}/${obj.mon}/${obj.day}<br>${obj.hou}:${obj.per}:${obj.min}:${obj.sec}`
+    }
     getFunFormatted() {
         const obj = this.toEikyuFormat()
         return `${obj.fyea}/${obj.mon}/${obj.day}(${obj.fweek}) ${obj.hou}:${obj.per}:${obj.min}:${obj.sec}`

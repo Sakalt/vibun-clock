@@ -24,30 +24,41 @@ h2 {
     font-size: 30px;
     font-family: sans-serif;
     margin-top: 30px;
-    margin-bottom: 0px;
+    margin-bottom: 10px;
     text-align: center;
 }
 #jst {
-    font-size: 20px;
+    font-size: 25px;
     font-family: sans-serif;
 }
 #fun {
     font-family: "FunScript", sans-serif;
     font-size: 28px;
+    writing-mode: vertical-rl;
+    display: inline-block;
 }
 #eikyu {
     font-family: "LetiaNum", sans-serif;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 content {
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
     display: inline-block;
-    width: 49%;
-    vertical-align:  top;
     box-sizing: border-box;
+}
+#digital {
+    width: 35%;
+    vertical-align:  top;
+}
+#analog {
+    width: 35%;
+    vertical-align:  top;
+}
+#funclock {
+    width: 29%;
+    text-align: center;
 }
 .contentwrapper {
     margin-bottom: 50px;
@@ -94,6 +105,22 @@ table {
 }
 th {
     color: #000;
+    text-shadow: 
+    0.2px 0.2px 0, 
+    0.2px -0.2px 0px,
+    -0.2px 0.2px 0,
+    -0.2px -0.2px 0px,
+    0.2px 0.2px 0, 
+    0.2px -0.2px 0px,
+    -0.2px 0.2px 0,
+    -0.2px -0.2px 0px;
+}
+td {
+    text-shadow: 
+    0.05px 0.05px 0, 
+    0.05px -0.05px 0px,
+    -0.05px 0.05px 0,
+    -0.05px -0.05px 0px;
 }
 th, td {
     outline: 1px solid rgb(222, 222, 222);
@@ -102,16 +129,8 @@ th, td {
     text-align: center;
     font-family: "FunScript", sans-serif;
     font-size: 25px;
-    text-shadow: 
-    0.1px 0.1px 0, 
-    0.1px -0.1px 0px,
-    -0.1px 0.1px 0,
-    -0.1px -0.1px 0px,
-    0.1px 0px 0px,
-    0px 0.1px 0px,
-    -0.1px 0px 0px,
-    0px -0.1px 0px;
     background-color: rgb(243, 243, 243);
+    writing-mode: vertical-rl;
 }
 /*日曜日*/
 .days0 {

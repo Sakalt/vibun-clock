@@ -1,5 +1,5 @@
 export class FunNumber {
-    toFunNumber(input) {
+    toOldFunNumber(input) {
         const oneNumbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
         const orderNumbers = ["", "十", "百", "千", "万"];
         const stringed = String(input);
@@ -17,6 +17,15 @@ export class FunNumber {
         }
         if (input == 0) {
             return "零";
+        }
+        return output;
+    }
+    toFunNumber(input) {
+        const Numbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+        const stringed = String(input);
+        let output = "";
+        for (let i = 0; i < stringed.length; i++) {
+            output += Numbers[Number(stringed[i])];
         }
         return output;
     }
