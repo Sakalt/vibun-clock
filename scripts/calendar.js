@@ -32,7 +32,7 @@ function showProcess(date) {
     let fyear = date.toEikyuFormat().fyea;
     let year = date.toEikyuFormat().yea;
     let month = date.toEikyuFormat().mon;
-    document.querySelector('#monthheader').innerHTML = funNumber.toFunNumber(fyear) + "年" + funNumber.toFunNumber(month) + "月";
+    document.querySelector('#monthheader').innerHTML = funNumber.toFunNumberbase12(fyear) + "年" + funNumber.toFunNumberbase12(month) + "月";
     let calendar = createProcess(year, month);
     document.querySelector('#calendar').innerHTML = calendar;
 }
@@ -58,12 +58,12 @@ function createProcess(year, month) {
         for (let j = 0; j < week.length; j++) {
             if (i == 0 && j < startDayOfWeek) {
                 // 1行目で1日まで先月の日付を設定
-                calendarRow.push("<td class='disabled'>" + funNumber.toFunNumber(lastMonthEndDate - startDayOfWeek + j + 1) + "</td>");
+                calendarRow.push("<td class='disabled'>" + funNumber.toFunNumberbase12(lastMonthEndDate - startDayOfWeek + j + 1) + "</td>");
             }
             else if (count >= endDate) {
                 // 最終行で最終日以降、翌月の日付を設定
                 count++;
-                calendarRow.push("<td class='disabled'>" + funNumber.toFunNumber(count - endDate) + "</td>");
+                calendarRow.push("<td class='disabled'>" + funNumber.toFunNumberbase12(count - endDate) + "</td>");
             }
             else {
                 // 当月の日付を曜日に照らし合わせて設定
@@ -71,11 +71,11 @@ function createProcess(year, month) {
                 if (year == today.yea
                     && month == today.mon
                     && count == today.day) {
-                    calendarRow.push("<td class='today'>" + funNumber.toFunNumber(count) + "</td>");
+                    calendarRow.push("<td class='today'>" + funNumber.toFunNumberbase12(count) + "</td>");
                 }
                 else {
                     const thisDays = new EikyuDate("split", year, month, count).toEikyuFormat().fweeknum;
-                    calendarRow.push("<td class='" + "days" + thisDays + "'>" + funNumber.toFunNumber(count) + "</td>");
+                    calendarRow.push("<td class='" + "days" + thisDays + "'>" + funNumber.toFunNumberbase12(count) + "</td>");
                 }
             }
         }

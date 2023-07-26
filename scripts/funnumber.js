@@ -20,13 +20,12 @@ export class FunNumber {
         }
         return output;
     }
-    toFunNumber(input) {
-        const Numbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
-        const stringed = String(input);
-        let output = "";
-        for (let i = 0; i < stringed.length; i++) {
-            output += Numbers[Number(stringed[i])];
-        }
-        return output;
+    toFunNumberbase12(input) {
+        const numbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九"];
+        return input.toString(10).split("").map(n => numbers[Number(n)]).join("");
+    }
+    toFunNumberbase12(input) {
+        const numbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "甲", "乙"];
+        return input.toString(12).split("").map(n => numbers[parseInt(n, 12)]).join("");
     }
 }

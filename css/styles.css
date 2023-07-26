@@ -102,32 +102,13 @@ table {
     border-collapse: collapse;
     width: 100%;
 }
-th {
-    color: #000;
-    text-shadow: 
-    0.2px 0.2px 0, 
-    0.2px -0.2px 0px,
-    -0.2px 0.2px 0,
-    -0.2px -0.2px 0px,
-    0.2px 0.2px 0, 
-    0.2px -0.2px 0px,
-    -0.2px 0.2px 0,
-    -0.2px -0.2px 0px;
-}
-td {
-    text-shadow: 
-    0.05px 0.05px 0, 
-    0.05px -0.05px 0px,
-    -0.05px 0.05px 0,
-    -0.05px -0.05px 0px;
-}
 th, td {
     outline: 1px solid rgb(222, 222, 222);
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
     font-family: "FunScript", sans-serif;
-    font-size: 25px;
+    font-size: 20px;
     background-color: rgb(243, 243, 243);
 }
 /*日曜日*/
@@ -198,5 +179,5 @@ th, td, #fun {
 }
 @font-face {   
     font-family: "FunScript";
-    src: url("/fonts/Funscript_Bold.ttf");
+    src: url("/fonts/PhunWrite-Regular-20230725.ttf");
 }
