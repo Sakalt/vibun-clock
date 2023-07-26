@@ -19,7 +19,7 @@ export class FunNumber {
         }
         return output
     }
-    toFunNumberbase12(input: number) {
+    toFunNumber(input: number) {
         const numbers = ["零","一","二","三","四","五","六","七","八","九"]
         return input.toString(10).split("").map(n => numbers[Number(n)]).join("")
     }

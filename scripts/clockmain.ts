@@ -144,7 +144,7 @@ export class EikyuDate {
         return new EikyuDate("total", EikyuDate.toEikyu(now))
     }
     timezone(hour: number) {
-        return new EikyuDate("total", this.date + 10000000 * hour)
+        return new EikyuDate("total", this.date + 20736000 * hour)
     }
     getFunScriptedHTMLBase12() {
         const funNumber = new FunNumber()
