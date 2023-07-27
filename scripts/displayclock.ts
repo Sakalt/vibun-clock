@@ -1,6 +1,5 @@
 import {EikyuDate} from './clockmain.js'
 import {FunNumber} from './funnumber.js'
-const now = new Date(Date.UTC(2023, 0, 1))
 
 function refreshclock() {
     const date = new Date()

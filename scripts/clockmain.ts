@@ -18,14 +18,14 @@ export class EikyuDate {
         const dayOfYear = (difYear) * 539 + Math.ceil((difYear / 40)) + Math.floor(((difYear + 40) / 400))
         const dayOfMonth = Math.floor((mon - 1) / 17) * 539 + (mod(mon - 1, 17)) * 32
         const dayOfAll = dayOfYear + dayOfMonth + day - 1
-        const allMiliSecond = 166318064640000 + dayOfAll * 248832000 + hou * 20736000 + per * 1728000 + min * 144000 + sec * 1000 + mil //0~1240 + すべて
+        const allMiliSecond = 134127166464000 + 166318064640000 + dayOfAll * 248832000 + hou * 20736000 + per * 1728000 + min * 144000 + sec * 1000 + mil //-1000~1240 + すべて
         return allMiliSecond
     }
     static toEikyu(earthDate: number) {
         const pivot = Date.UTC(2023, 0, 1)
         const difference = earthDate - pivot
         const eikyuDif = difference / 0.34834346064814814
-        const eikyuNow = eikyuDif + 420114556414 + 166318064640000 //1240～基準点 + 0～1240
+        const eikyuNow = eikyuDif + 420114556414 + 166318064640000 + 134127166464000 //1240/1/1～基準点 + 0/1/1～1239/17/32 + -1000/1/1～-1/17/32
         return eikyuNow
     }
     toEikyuFormat_Old() {
@@ -92,7 +92,7 @@ export class EikyuDate {
         const eikyuFWeekNum = Math.floor(differenceDay - 1) % 6
     
         let dayForNum = eikyuNow / 1000 / 12**2 / 12 / 12 / 12
-        let countYears = 0
+        let countYears = -1000
     
         while (dayForNum >= 0) {
             const saveDay = dayForNum

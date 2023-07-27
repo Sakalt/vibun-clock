@@ -1,5 +1,4 @@
 import { EikyuDate } from './clockmain.js';
-const now = new Date(Date.UTC(2023, 0, 1));
 function refreshclock() {
     const date = new Date();
     const formattedEdate = EikyuDate.now().getFormattedHTML();
