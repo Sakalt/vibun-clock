@@ -32,7 +32,7 @@ h2 {
     font-family: sans-serif;
 }
 #fun {
-    font-family: "FunScript", sans-serif;
+    font-family: "PhunScript", sans-serif;
     font-size: 28px;
     display: inline-block;
 }
@@ -89,7 +89,7 @@ content {
     font-size: 40px;
     width: 100%;
     margin: 1rem 0 0;
-    font-family: "FunScript", sans-serif;
+    font-family: "PhunScript", sans-serif;
 }
 
 /*カレンダー*/
@@ -107,7 +107,7 @@ th, td {
     padding-top: 10px;
     padding-bottom: 10px;
     text-align: center;
-    font-family: "FunScript", sans-serif;
+    font-family: "PhunScript", sans-serif;
     font-size: 20px;
     background-color: rgb(243, 243, 243);
 }
@@ -178,6 +178,6 @@ th, td, #fun {
     src: url("/fonts/LetiaNum.ttf");
 }
 @font-face {   
-    font-family: "FunScript";
-    src: url("/fonts/PhunWrite-Regular-20230725.ttf");
+    font-family: "PhunScript";
+    src: url("/fonts/PhunWrite-Latest.woff") format("woff");
 }

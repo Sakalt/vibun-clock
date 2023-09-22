@@ -144,14 +144,14 @@ export class EikyuDate {
         const funNumber = new FunNumber();
         const eikyuObj = this.toEikyuFormat();
         const obj = {
-            sec: funNumber.toFunNumberbase12(eikyuObj.sec),
-            min: funNumber.toFunNumberbase12(eikyuObj.min),
-            per: funNumber.toFunNumberbase12(eikyuObj.per),
-            hou: funNumber.toFunNumberbase12(eikyuObj.hou),
-            day: funNumber.toFunNumberbase12(eikyuObj.day),
-            mon: funNumber.toFunNumberbase12(eikyuObj.mon),
+            sec: funNumber.toPhunCalcNum(eikyuObj.sec),
+            min: funNumber.toPhunCalcNum(eikyuObj.min),
+            per: funNumber.toPhunCalcNum(eikyuObj.per),
+            hou: funNumber.toPhunCalcNum(eikyuObj.hou),
+            day: funNumber.toPhunCalcNum(eikyuObj.day),
+            mon: funNumber.toPhunCalcNum(eikyuObj.mon),
             fweek: eikyuObj.fweek,
-            fyea: funNumber.toFunNumberbase12(eikyuObj.fyea),
+            fyea: funNumber.toPhunCalcNum(eikyuObj.fyea),
         };
         return `${obj.fyea}年${obj.mon}月${obj.day}日 ${obj.fweek}周 ${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`;
     }
@@ -159,14 +159,14 @@ export class EikyuDate {
         const funNumber = new FunNumber();
         const eikyuObj = this.toEikyuFormat();
         const obj = {
-            sec: funNumber.toFunNumberbase12(eikyuObj.sec),
-            min: funNumber.toFunNumberbase12(eikyuObj.min),
-            per: funNumber.toFunNumberbase12(eikyuObj.per),
-            hou: funNumber.toFunNumberbase12(eikyuObj.hou),
-            day: funNumber.toFunNumberbase12(eikyuObj.day),
-            mon: funNumber.toFunNumberbase12(eikyuObj.mon),
+            sec: funNumber.toPhunCalcNum(eikyuObj.sec),
+            min: funNumber.toPhunCalcNum(eikyuObj.min),
+            per: funNumber.toPhunCalcNum(eikyuObj.per),
+            hou: funNumber.toPhunCalcNum(eikyuObj.hou),
+            day: funNumber.toPhunCalcNum(eikyuObj.day),
+            mon: funNumber.toPhunCalcNum(eikyuObj.mon),
             fweek: eikyuObj.fweek,
-            fyea: funNumber.toFunNumberbase12(eikyuObj.fyea),
+            fyea: funNumber.toPhunCalcNum(eikyuObj.fyea),
         };
         return `${obj.fyea}年${obj.mon}月${obj.day}日 ${obj.fweek}周<br>${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`;
     }
@@ -174,14 +174,14 @@ export class EikyuDate {
         const funNumber = new FunNumber();
         const eikyuObj = this.toEikyuFormat();
         const obj = {
-            sec: funNumber.toFunNumberbase12(eikyuObj.sec),
-            min: funNumber.toFunNumberbase12(eikyuObj.min),
-            per: funNumber.toFunNumberbase12(eikyuObj.per),
-            hou: funNumber.toFunNumberbase12(eikyuObj.hou),
-            day: funNumber.toFunNumberbase12(eikyuObj.day),
-            mon: funNumber.toFunNumberbase12(eikyuObj.mon),
+            sec: funNumber.toPhunCalcNum(eikyuObj.sec),
+            min: funNumber.toPhunCalcNum(eikyuObj.min),
+            per: funNumber.toPhunCalcNum(eikyuObj.per),
+            hou: funNumber.toPhunCalcNum(eikyuObj.hou),
+            day: funNumber.toPhunCalcNum(eikyuObj.day),
+            mon: funNumber.toPhunCalcNum(eikyuObj.mon),
             fweek: eikyuObj.fweek,
-            fyea: funNumber.toFunNumberbase12(eikyuObj.fyea),
+            fyea: funNumber.toPhunCalcNum(eikyuObj.fyea),
         };
         return `${obj.fyea}年${obj.mon}月${obj.day}日 ${obj.fweek}周 ${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`;
     }
@@ -189,14 +189,14 @@ export class EikyuDate {
         const funNumber = new FunNumber();
         const eikyuObj = this.toEikyuFormat();
         const obj = {
-            sec: funNumber.toFunNumberbase12(eikyuObj.sec),
-            min: funNumber.toFunNumberbase12(eikyuObj.min),
-            per: funNumber.toFunNumberbase12(eikyuObj.per),
-            hou: funNumber.toFunNumberbase12(eikyuObj.hou),
-            day: funNumber.toFunNumberbase12(eikyuObj.day),
-            mon: funNumber.toFunNumberbase12(eikyuObj.mon),
+            sec: funNumber.toPhunCalcNum(eikyuObj.sec),
+            min: funNumber.toPhunCalcNum(eikyuObj.min),
+            per: funNumber.toPhunCalcNum(eikyuObj.per),
+            hou: funNumber.toPhunCalcNum(eikyuObj.hou),
+            day: funNumber.toPhunCalcNum(eikyuObj.day),
+            mon: funNumber.toPhunCalcNum(eikyuObj.mon),
             fweek: eikyuObj.fweek,
-            fyea: funNumber.toFunNumberbase12(eikyuObj.fyea),
+            fyea: funNumber.toPhunCalcNum(eikyuObj.fyea),
         };
         return `${obj.fyea}年${obj.mon}月${obj.day}日${obj.fweek}周<br>${obj.hou}時${obj.per}刻${obj.min}分${obj.sec}秒`;
     }
