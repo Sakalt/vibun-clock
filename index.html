@@ -14,15 +14,12 @@
             </h1>
             <div class="contentwrapper">
                 <content id="digital">
-                    <h2>
-                        この端末の時刻（西暦）
-                    </h2>
+                    <h2>この端末の時刻（西暦）</h2>
                     <div id="jst"></div>
                 </content>
+                
                 <content id="funclock">
-                    <h2>
-                        雰国標準時（遍世時）
-                    </h2>
+                    <h2>雰国標準時（遍世時）</h2>
                     <div id="fun"></div>
                 </content>
                 <content id="analog">
@@ -38,6 +35,19 @@
                         <img src="../assets/pin.png" width="250" height="250" id="image_pin" class="clock">
                     </div>
                 </content>
+
+                <h2>暦法相互変換フォーム</h2>
+                <div id="convert">
+                    <div id="utcwrapper">
+                        <h3>西暦 (UTC)</h3>
+                        <input type="text" class="timeinputs" id="utcinput" value="2023-1-1-1-1-1">
+                    </div>
+
+                    <div id="phuntimewrapper">
+                        <h3>旭暦 (遍世時)</h3>
+                        <input type="text" class="timeinputs" id="phuninput">
+                    </div>
+                </div>
             </div>
 
             <h2>

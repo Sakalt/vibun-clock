@@ -28,52 +28,12 @@ export class EikyuDate {
         const eikyuNow = eikyuDif + 420114556414 + 166318064640000 + 134127166464000; //1240/1/1～基準点 + 0/1/1～1239/17/32 + -1000/1/1～-1/17/32
         return eikyuNow;
     }
-    toEikyuFormat_Old() {
-        const funweeklist = ["天", "火", "気", "木", "水", "土"];
-        const eikyuPointSec = this.date / 1000 % 12 ** 2;
-        const eikyuSec = Math.floor(this.date / 1000 % 12 ** 2);
-        const eikyuMin = Math.floor(this.date / 1000 / 12 ** 2 % 12);
-        const eikyuPer = Math.floor(this.date / 1000 / 12 ** 2 / 12 % 12);
-        const eikyuHou = Math.floor(this.date / 1000 / 12 ** 2 / 12 / 12 % 12);
-        const differenceDay = this.date / 1000 / 12 ** 2 / 12 / 12 / 12;
-        const eikyuFWeek = funweeklist[Math.floor(differenceDay) % 6];
-        const eikyuFWeekNum = Math.floor(differenceDay) % 6;
-        console.log(differenceDay);
-        let dayForNum = this.date / 1000 / 12 ** 2 / 12 / 12 / 12;
-        let countYears = 1240;
-        while (dayForNum >= 0) {
-            const saveDay = dayForNum;
-            dayForNum -= 539;
-            if (countYears % 40 == 0) {
-                dayForNum -= 1;
-            }
-            if (countYears % 400 == 0) {
-                dayForNum -= 1;
-            }
-            if (dayForNum < 0) {
-                dayForNum = saveDay;
-                break;
-            }
-            countYears++;
-        }
-        const eikyuYea = countYears;
-        const eikyuFunYea = eikyuYea + 843;
-        const eikyuMon = Math.floor(dayForNum / 32) + 1;
-        const eikyuDay = Math.floor(dayForNum % 32) + 1;
-        const dateObj = {
-            psec: eikyuPointSec,
-            sec: eikyuSec,
-            min: eikyuMin,
-            per: eikyuPer,
-            hou: eikyuHou,
-            day: eikyuDay,
-            mon: eikyuMon,
-            fweek: eikyuFWeek,
-            fweeknum: eikyuFWeekNum,
-            yea: eikyuYea,
-            fyea: eikyuFunYea
-        };
-        return dateObj;
+    static toEarth(eikyuDate) {
+        const pivot = Date.UTC(2023, 0, 1);
+        const eikyuRaw = eikyuDate - 420114556414 - 166318064640000 - 134127166464000; //全部引く
+        const earthDif = eikyuRaw * 0.34834346064814814;
+        const earthNow = pivot + earthDif;
+        return earthNow;
     }
     toEikyuFormat() {
         const eikyuNow = this.date;

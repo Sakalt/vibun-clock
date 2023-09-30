@@ -1,4 +1,10 @@
 import { EikyuDate } from './clockmain.js';
+import { earthToPhun, phunToEarth, valueReset } from './convert.js';
+const UTCInput = document.getElementById("utcinput");
+const PhunInput = document.getElementById("phuninput");
+valueReset();
+UTCInput.addEventListener("input", earthToPhun);
+PhunInput.addEventListener("input", phunToEarth);
 function refreshclock() {
     const date = new Date();
     const formattedEdate = EikyuDate.now().getFormattedHTML();

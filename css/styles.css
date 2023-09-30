@@ -173,6 +173,21 @@ th, td, #fun {
     -webkit-text-orientation: upright;
 }
 
+#convert {
+    text-align: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.timeinputs {
+    width: 15em;
+    height: 1.5em;
+    border: #014f41 2px solid;
+    border-radius: 0.5em;
+    margin: 0 20px;
+}
+
 @font-face {   
     font-family: "LetiaNum";
     src: url("/fonts/LetiaNum.ttf");
