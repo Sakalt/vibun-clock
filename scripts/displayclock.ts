@@ -9,14 +9,15 @@ valueReset()
 UTCInput.addEventListener("input", earthToPhun)
 PhunInput.addEventListener("input", phunToEarth)
 
+//console.log(EikyuDate.now().getPhunHTMLBase12())
+
 function refreshclock() {
     const date = new Date()
-    const formattedEdate = EikyuDate.now().getFormattedHTML()
-    const formattedFdate = EikyuDate.now().timezone(6).getFunScriptedHTMLBase12()
+    const formattedPdate = EikyuDate.now().getPhunHTMLBase12()
     const jst = document.getElementById('jst')
-    const fun = document.getElementById('fun')
+    const phun = document.getElementById('phun')
     const formattedDate = `${date.getFullYear()}/${date.getMonth()+1}/${date.getDate()}<br>${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`
     jst!.innerHTML = formattedDate;
-    fun!.innerHTML = formattedFdate;
+    phun!.innerHTML = formattedPdate;
 }
 setInterval(refreshclock, 1);

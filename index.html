@@ -4,7 +4,7 @@
         <title>EikyuClock</title>
         <link rel="stylesheet" href="css/styles.css">
         <script src="scripts/displayclock.js" type="module"></script>
-        <script src="scripts/calendar.js" type="module"></script>
+        <!--<script src="scripts/calendar.js" type="module"></script>-->
         <script src="scripts/analogclock.js" type="module"></script>
     </head>
     <body>
@@ -20,7 +20,7 @@
                 
                 <content id="funclock">
                     <h2>雰国標準時（遍世時）</h2>
-                    <div id="fun"></div>
+                    <div id="phun"></div>
                 </content>
                 <content id="analog">
                     <h2>
@@ -40,7 +40,7 @@
                 <div id="convert">
                     <div id="utcwrapper">
                         <h3>西暦 (UTC)</h3>
-                        <input type="text" class="timeinputs" id="utcinput" value="2023-1-1-1-1-1">
+                        <input type="text" class="timeinputs" id="utcinput" value="2023_1_1_1_1_1">
                     </div>
 
                     <div id="phuntimewrapper">
@@ -50,22 +50,21 @@
                 </div>
             </div>
 
-            <h2>
-                カレンダー（遍世時）
-            </h2>
-            <div class="wrapper">
-                <!-- xxxx年xx月を表示 -->
-                <div id="monthheader"></div>
-            
-                <!-- ボタンクリックで月移動 -->
-                <div id="next-prev-button">
-                    <button id="prev">&lt;</button>
-                    <button id="next">&gt;</button>
+            <!--
+                <h2>
+                    カレンダー（遍世時）
+                </h2>
+                <div class="wrapper">
+                    <div id="monthheader"></div>
+                
+                    <div id="next-prev-button">
+                        <button id="prev">&lt;</button>
+                        <button id="next">&gt;</button>
+                    </div>
+                
+                    <div id="calendar"></div>
                 </div>
-            
-                <!-- カレンダー -->
-                <div id="calendar"></div>
-            </div>
+            -->
         </main>
     </body>
 </html>

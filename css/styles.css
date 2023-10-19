@@ -31,7 +31,7 @@ h2 {
     font-size: 25px;
     font-family: sans-serif;
 }
-#fun {
+#phun {
     font-family: "PhunScript", sans-serif;
     font-size: 28px;
     display: inline-block;
@@ -165,7 +165,7 @@ td.today {
     float: right;
 }
 
-th, td, #fun {
+th, td, #phun {
     writing-mode: vertical-rl;
     -ms-writing-mode: tb-rl;
     -webkit-writing-mode: vertical-rl;
