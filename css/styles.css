@@ -189,10 +189,6 @@ th, td, #phun {
 }
 
 @font-face {   
-    font-family: "LetiaNum";
-    src: url("/fonts/LetiaNum.ttf");
-}
-@font-face {   
     font-family: "PhunScript";
-    src: url("/fonts/PhunWrite-Latest.woff") format("woff");
+    src: url("https://kaeru2193.github.io/Phun-Resources/font/PhunWrite-Regular-latest.woff") format("woff");
 }

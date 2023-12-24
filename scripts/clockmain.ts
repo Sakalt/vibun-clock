@@ -75,27 +75,7 @@ export class EikyuDate {
         let numOfPeriod1 = Math.floor(dayIn40 / Period1) //周期内n年目
         if (numOfPeriod1 >= 40) {numOfPeriod1 = 39} //閏年の最後の日を前の年へ
         const dayIn1 = dayIn40 - numOfPeriod1 * Period1 //年内日数
-        /*
-        let dayForNum = eikyuNow / 1000 / 72 / 12 / 12 / 12
-        let countYears = 0
-    
-        while (dayForNum >= 0) {
-            const saveDay = dayForNum
-            dayForNum -= 539
-            if (countYears % 40 == 0) {
-                dayForNum -= 1
-            }
-            if (countYears % 400 == 0) {
-                dayForNum -= 1
-            }
-            if (dayForNum < 0) {
-                dayForNum = saveDay
-                break
-            }
-            countYears++
-        }
-        */
-        console.log(dayIn1)
+        
         const eikyuYea = numOfPeriod400 * 400 + numOfPeriod40 * 40 + numOfPeriod1 * 1 + 1 //周期を合計&補正分を加算
         const eikyuLetYea = eikyuYea - 843
         let eikyuSea = Math.floor(dayIn1 / 60) + 1
@@ -168,4 +148,4 @@ export class EikyuDate {
     }
 }
 
-console.log(EikyuDate.now(Date.UTC(2023, 0, 1)).toEikyuFormat())
+console.log(Date.UTC(2023, 0, 1))
