@@ -17,7 +17,7 @@ h1 {
     -moz-background-clip: text;
     background-clip: text;
     color: transparent;
-    text-shadow: rgba(245,245,245,0.5) 3px 5px 1px;
+    text-shadow: rgba(255,255,255,0.5) 3px 5px 1px;
     margin-bottom: 5px;
 }
 h2 {
