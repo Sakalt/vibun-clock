@@ -2,9 +2,6 @@ h1, h2, #digital, p {
     text-align: center;
 }
 
-strong {
-color: #ffffff;
-}
 
 body {
     background-image: url(../assets/image.png)
@@ -200,4 +197,7 @@ th, td, #phun {
 @font-face {   
     font-family: "PhunScript";
     src: url("https://kaeru2193.github.io/Phun-Resources/font/PhunWrite-Regular-latest.woff") format("woff");
+}
+.PhunScript {
+　color: #ffffff;
 }
